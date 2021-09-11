@@ -1,4 +1,5 @@
 # design-patterns
-Observer Design Pattern 
+1:Observer Design Pattern ---->example = news paper subscription model
+2:abstract factory pattern -----> example = wheels
 
-news paper subscription model
+
