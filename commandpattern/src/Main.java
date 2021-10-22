@@ -2,17 +2,40 @@ public class Main {
 
     public static void main(String[] args) {
         Wheels wheels = new Wheels();
+        WheelAutomationRemote remote = new WheelAutomationRemote();
 
-        WheelsManufacturer wheelsManufacturer = new WheelsManufacturer(wheels);
-        RecyclingWheels recyclingWheels = new RecyclingWheels(wheels);
+        remote.setCommand(new AlloySpinnerCommand(wheels));
+        remote.buttonPressed();
+        System.out.println("*********************************");
+
+        remote.setCommand(new AlloyFloatersCommand(wheels));
+        remote.buttonPressed();
+        System.out.println("*********************************");
+
+        remote.setCommand(new AlloyColorCommand(wheels));
+        remote.buttonPressed();
+        System.out.println("*********************************");
+
+        remote.setCommand(new AlloyProtectionCommand(wheels));
+        remote.buttonPressed();
+        System.out.println("*********************************");
 
 
+        remote.setCommand(new SteelSpinnerCommand(wheels));
+        remote.buttonPressed();
+        System.out.println("*********************************");
 
-        Organization organization = new Organization();
-        organization.Wheels_Manufacturer_Order(wheelsManufacturer);
-        organization.Wheels_Manufacturer_Order(recyclingWheels);
+        remote.setCommand(new SteelFloatersCommand(wheels));
+        remote.buttonPressed();
+        System.out.println("*********************************");
 
-        organization.Start_production_orders();
+        remote.setCommand(new SteelColorCommand(wheels));
+        remote.buttonPressed();
+        System.out.println("*********************************");
+
+        remote.setCommand(new SteelProtectionCommand(wheels));
+        remote.buttonPressed();
+        System.out.println("*********************************");
 
 
 
